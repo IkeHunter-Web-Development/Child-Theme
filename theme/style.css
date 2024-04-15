@@ -1,7 +1,7 @@
 /* 
 Theme Name: Hello Elementor Child
 Theme URI: https://github.com/elementor/hello-theme-child/
-Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Description: Hello Elementor Child is a child theme of Hello Elementor.
 Author: IkeHunter Web Development
 Author URI: https://ikehunter.com
 Template: hello-elementor
@@ -15,3 +15,14 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 .elementor-inner-section:not(.default-padding) .elementor-inner-column .elementor-widget-wrap {
     padding: 0;
 }
+
+/* Background blur effect
+ * Usage:
+ * - Add .bg-blur to elementor container
+ * - Set the image as background image
+ * - For overlay, set opacity setting to 1 and use
+ * RGBA to get opacity level
+ */
+.bg-blur::before {
+    backdrop-filter: blur(3px);
+  }

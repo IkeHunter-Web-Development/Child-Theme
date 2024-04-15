@@ -100,3 +100,13 @@ function credit_shortcode() {
   return $credit;
 }
 add_shortcode('credit', 'credit_shortcode');
+
+function remove_thankyou_message() {
+    echo '<style>
+		#footer-thankyou {
+			display: none;
+		}
+	</style>
+	';
+}
+add_action('admin_head', 'remove_thankyou_message');
